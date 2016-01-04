@@ -1,0 +1,156 @@
+{
+    "cordova-plugin-device": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-console": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-console"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-splashscreen": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-splashscreen"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-statusbar": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-statusbar"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "ionic-plugin-keyboard": {
+        "source": {
+            "type": "registry",
+            "id": "ionic-plugin-keyboard"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "phonegap-plugin-barcodescanner": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/wildabeast/BarcodeScanner.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-inappbrowser"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-extension": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-extension"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.google.admobsdk": {
+        "source": {
+            "type": "registry",
+            "id": "com.google.admobsdk"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-connectivity-monitor": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-connectivity-monitor"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-google-play-services": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-google-play-services"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "com.google.playservices": {
+        "source": {
+            "type": "registry",
+            "id": "com.google.playservices"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.google.cordova.admob": {
+        "source": {
+            "type": "registry",
+            "id": "com.google.cordova.admob"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.rjfun.cordova.extension": {
+        "source": {
+            "type": "registry",
+            "id": "com.rjfun.cordova.extension"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.pushandplay.cordova.apprate": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/pushandplay/cordova-plugin-apprate.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.apache.cordova.dialogs": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.dialogs"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.apache.cordova.globalization": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.globalization"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.apache.cordova.inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.inappbrowser"
+        },
+        "is_top_level": false,
+        "variables": {}
+    }
+}
