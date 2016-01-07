@@ -1,22 +1,27 @@
 controllers.controller('QRCtrl', function(
 		$scope,
+		$rootScope,
 		$cordovaBarcodeScanner,
 		$cordovaInAppBrowser,
 		$cordovaAppRate,
 		$ionicPopup) {
 	
+	$scope.dontShowAgain = false;
+	$scope.dontShowAgainAds = false;
+	
 	$scope.scanBarcode = function() {
         $cordovaBarcodeScanner.scan().then(function(imageData) {
-        	if (imageData.text.substring(0, 4) == "http") {
+        	testURL = imageData.text.trim();
+        	if (testURL.substring(0, 4) == "http") {
         	    $cordovaInAppBrowser.open(imageData.text, "_self");		
         	} else {
         		var myPopup = $ionicPopup.show({
         		    title: 'Result:',
         		    subTitle: imageData.text,
-        		    buttons: [{ text: 'OK' }, { text: 'It\'s an URL',
+        		    buttons: [{ text: 'OK',
         		        onTap: function(e) {
-        	        	    $cordovaInAppBrowser.open(imageData.text, "_self");
-        		        }
+        	        	    rating();
+        		        } 
         		    }]
         		});
         	}
@@ -25,9 +30,19 @@ controllers.controller('QRCtrl', function(
         });
     };
     
-    document.addEventListener("deviceready", function () {
-    	$cordovaAppRate.promptForRating(true).then(function (result) {
-            // success
-        });
-    }, false);
+    $rootScope.$on('$cordovaInAppBrowser:exit', function(e, event) {
+    	rating();
+    });
+    
+    function rating() {
+//    	if (!$scope.dontShowAgain) {
+//    	    $cordovaAppRate.promptForRating(true).then(function (result) {
+//    	    	$scope.dontShowAgain = true;
+//            });	
+//    	} else 
+//    	if (!$scope.dontShowAgainAds) {
+    	    adbuddiz.showAd();
+	    	$scope.dontShowAgainAds = true;
+//    	}
+    }
 });

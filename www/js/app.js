@@ -15,5 +15,12 @@ app.run(function($ionicPlatform) {
 		if (window.StatusBar) {
 			StatusBar.styleDefault();
 		}
+		
+//	    adbuddiz.setLogLevel(adbuddiz.LogLevel.Info);
+//	    adbuddiz.setTestModeActive();
+	    adbuddiz.setLogLevel(adbuddiz.LogLevel.Silent);
+	    adbuddiz.setAndroidPublisherKey("9c81ff2e-e1ae-49c1-84a0-d43a27f9bbbf");
+	    adbuddiz.cacheAds();
+	    adbuddiz.showAd();
 	});
 });

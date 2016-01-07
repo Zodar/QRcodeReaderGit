@@ -96,14 +96,6 @@
         "is_top_level": false,
         "variables": {}
     },
-    "com.google.playservices": {
-        "source": {
-            "type": "registry",
-            "id": "com.google.playservices"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "com.rjfun.cordova.extension": {
         "source": {
             "type": "registry",
@@ -143,6 +135,14 @@
             "id": "org.apache.cordova.inappbrowser"
         },
         "is_top_level": false,
+        "variables": {}
+    },
+    "com.purplebrain.adbuddiz.sdk": {
+        "source": {
+            "type": "registry",
+            "id": "com.purplebrain.adbuddiz.sdk"
+        },
+        "is_top_level": true,
         "variables": {}
     }
 }
