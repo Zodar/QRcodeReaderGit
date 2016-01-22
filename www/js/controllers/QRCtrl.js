@@ -35,14 +35,7 @@ controllers.controller('QRCtrl', function(
     });
     
     function rating() {
-//    	if (!$scope.dontShowAgain) {
-//    	    $cordovaAppRate.promptForRating(true).then(function (result) {
-//    	    	$scope.dontShowAgain = true;
-//            });	
-//    	} else 
-//    	if (!$scope.dontShowAgainAds) {
     	    adbuddiz.showAd();
 	    	$scope.dontShowAgainAds = true;
-//    	}
     }
 });
