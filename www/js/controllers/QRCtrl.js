@@ -1,41 +1,31 @@
-controllers.controller('QRCtrl', function(
-		$scope,
-		$rootScope,
-		$cordovaBarcodeScanner,
-		$cordovaInAppBrowser,
-		$cordovaAppRate,
-		$ionicPopup) {
+controllers.controller('QRCtrl', function($scope, $rootScope, QRBase, Message, $cordovaBarcodeScanner, $cordovaInAppBrowser, $ionicPopup) {
 	
-	$scope.dontShowAgain = false;
-	$scope.dontShowAgainAds = false;
+    function saveSuccess(msg) {
+    	Message.longBottom(msg);
+    }
 	
 	$scope.scanBarcode = function() {
         $cordovaBarcodeScanner.scan().then(function(imageData) {
         	testURL = imageData.text.trim();
         	if (testURL.substring(0, 4) == "http") {
+            	QRBase.saveOne(saveSuccess, imageData.text, getCurrentDate(), "link");
         	    $cordovaInAppBrowser.open(imageData.text, "_self");		
         	} else {
-        		var myPopup = $ionicPopup.show({
-        		    title: 'Result:',
-        		    subTitle: imageData.text,
-        		    buttons: [{ text: 'OK',
-        		        onTap: function(e) {
-        	        	    rating();
-        		        } 
-        		    }]
-        		});
+            	QRBase.saveOne(saveSuccess, imageData.text, getCurrentDate(), "texte");
+        		var myPopup = $ionicPopup.show({subTitle: imageData.text, buttons: [{text: 'OK'}] });
         	}
         }, function(error) {
-            console.error("Erreur perso: " + JSON.stringify(error));
+        	Message.erreur(error, "QRCtrl.js scanBarcode");
         });
     };
     
-    $rootScope.$on('$cordovaInAppBrowser:exit', function(e, event) {
-    	rating();
-    });
-    
-    function rating() {
-    	    adbuddiz.showAd();
-	    	$scope.dontShowAgainAds = true;
+    function getCurrentDate() {
+		var dateObj = new Date();
+		var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+		var month = monthNames[dateObj.getMonth()];
+		var day = dateObj.getUTCDate();
+		var year = dateObj.getUTCFullYear();
+		newdate = day + " " + month + " " + year;
+		return newdate;
     }
 });
