@@ -1,5 +1,5 @@
 <ion-view view-title="History">
-	<ion-content class="padding">
+	<ion-content class="padding grey">
 		<button ng-click="deleteAll();" class="button button-assertive col col-100"> Remove all QR codes in history </button>
 		<div class="list">
 		   		<div class="row">
@@ -8,9 +8,19 @@
 		        			QR codes
 	        			</div>
 					    <ion-list>
-					    <ion-item ng-repeat="item in listeQR" ng-click="go(item.text);">
-				    		<p class="QRcontent"> {{item.text}} </p>
-			       			<p> {{item.date}} </p>
+					    	<ion-item ng-repeat="item in listeQR" item="item" ng-click="select_an_option(item);" id="his_{{item.id}}">
+				    			<p class="QRcontent"> {{item.text}} </p>
+			       				<p> {{item.date}} </p>
+	       			       		
+	       			       		<!--
+	       			       		<button class="{{item.type}} col col-90 button button-small button-positive ion-android-globe" ng-click="go(item.text)">
+	       			       			Open in Browser
+	       			       		</button>
+	       			       		<button class="{{item.type}} col col-90 button button-small button-positive ion-document-text" ng-click="go_text(item.text)">
+	       			       			Open as Text
+	       			       		</button>
+	       			       		 -->
+          					</ion-item>	
 			       		</ion-list>
 			        </div>
 		        </div>
