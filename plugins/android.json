@@ -29,6 +29,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Toast\"><param name=\"android-package\" value=\"nl.xservices.plugins.Toast\" /></feature>",
                             "count": 1
                         },
@@ -54,10 +58,6 @@
                         },
                         {
                             "xml": "<feature name=\"BarcodeScanner\"><param name=\"android-package\" value=\"com.phonegap.plugins.barcodescanner.BarcodeScanner\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -622,6 +622,9 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.zodar.qr"
         },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.zodar.qr"
+        },
         "cordova-plugin-x-toast": {
             "PACKAGE_NAME": "com.zodar.qr"
         },
@@ -641,9 +644,6 @@
             "PACKAGE_NAME": "com.zodar.qr"
         },
         "phonegap-plugin-barcodescanner": {
-            "PACKAGE_NAME": "com.zodar.qr"
-        },
-        "cordova-plugin-x-socialsharing": {
             "PACKAGE_NAME": "com.zodar.qr"
         }
     },
